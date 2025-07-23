@@ -39,11 +39,23 @@ telegram:
 ### 3. Запусти приложение
 
 ```bash
-./gradlew bootRun --no-build-cache
+./gradlew bootRun
 ```
 
 ⚠️ Если получаешь ошибку при сборке — возможно, у тебя установлен JDK 21+.
 Мы отключили тесты, чтобы шаблон запускался без зависимостей.
+
+Однако, рекомендуем перейти на java 21.
+Проверь 
+```bash
+java -version
+```
+Если 21+, то перейди на 21:
+```bash
+sdk install java 21.0.3-tem
+sdk use java 21.0.3-tem
+java -version
+```
 
 ### 4. Настрой Telegram Webhook
 
