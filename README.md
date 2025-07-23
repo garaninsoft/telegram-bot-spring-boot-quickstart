@@ -22,23 +22,28 @@
 ### 1. Клонируй репозиторий
 
 ```bash
-git clone https://github.com/yourname/telegram-bot-spring-boot-quickstart.git
+git clone https://github.com/garaninsoft/telegram-bot-spring-boot-quickstart.git
 cd telegram-bot-spring-boot-quickstart
 ```
 
-### 2. Установи переменные окружения
+### 2. Укажи токен бота
 
-Создай файл `.env` (или экспортируй вручную):
+Открой файл `src/main/resources/application.yml` и вставь свой Telegram Bot Token:
 
-```env
-TELEGRAM_BOT_TOKEN=your_token_here
+```yaml
+telegram:
+  bot:
+    token: your_token_here
 ```
 
 ### 3. Запусти приложение
 
 ```bash
-./gradlew bootRun
+./gradlew bootRun --no-build-cache
 ```
+
+⚠️ Если получаешь ошибку при сборке — возможно, у тебя установлен JDK 21+.
+Мы отключили тесты, чтобы шаблон запускался без зависимостей.
 
 ### 4. Настрой Telegram Webhook
 
@@ -115,4 +120,3 @@ Telegram: [@garanin\_soft](https://t.me/garanin_soft)
 
 ---
 
-✅ Готово к публикации на Gumroad или GitHub Marketplace!
