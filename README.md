@@ -1,34 +1,34 @@
-# Telegram Bot на Spring Boot — Шаблон за Вечер
+# Telegram Bot on Spring Boot — Evening-Ready Starter Template
 
-Этот проект — минимальный, но профессионально структурированный шаблон Telegram-бота на Spring Boot. Подходит для:
+This project is a minimal yet professionally structured Spring Boot template for Telegram bots. Perfect for:
 
-* Быстрого старта с **Telegram API**
-* Новичков, изучающих **Spring Boot** и **REST API**
-* Создания MVP-ботов с логикой обработки команд
-
----
-
-## ✨ Возможности
-
-* ✉️ Обработка Webhook-запросов Telegram
-* ⚙️ Поддержка команд `/start` и `/calc`
-* ⌛ Простой калькулятор с командами типа `/calc 2 * 3`
-* 🌐 REST API с логированием и разделением ответственности (Controller / Service / Client)
+* Quickly starting with the **Telegram API**
+* Beginners learning **Spring Boot** and **REST API**
+* Creating MVP bots with basic command-handling logic
 
 ---
 
-## 🌐 Быстрый старт
+## ✨ Features
 
-### 1. Клонируй репозиторий
+* ✉️  Handles Telegram Webhook requests
+* ⚙️ Built-in support for `/start` and `/calc` commands
+* ⌛ Simple calculator for inputs like `/calc 2 * 3`
+* 🌐 REST API with logging and clear separation of concerns (Controller / Service / Client)
+
+---
+
+## 🌐 Quick Start
+
+### 1. Clone the repository
 
 ```bash
 git clone https://github.com/garaninsoft/telegram-bot-spring-boot-quickstart.git
 cd telegram-bot-spring-boot-quickstart
 ```
 
-### 2. Укажи токен бота
+### 2. Add your bot token
 
-Открой файл `src/main/resources/application.yml` и вставь свой Telegram Bot Token:
+Open `src/main/resources/application.yml` and paste your Telegram Bot Token::
 
 ```yaml
 telegram:
@@ -36,34 +36,34 @@ telegram:
     token: your_token_here
 ```
 
-### 3. Запусти приложение
+### 3. Run the app
 
 ```bash
 ./gradlew bootRun
 ```
 
-⚠️ Если получаешь ошибку при сборке — возможно, у тебя установлен ~~JDK 21+~~.
-Рекомендуем перейти на **java 21**.
-Проверь 
+⚠️  If you see a build error, you may be using ~~JDK 21+~~.
+We recommend switching to**java 21**.
+Check your version: 
 ```bash
 java -version
 ```
-Если ~~JDK 21+~~, то перейди на 21:
+f it's ~~JDK 21+~~, switch with:
 ```bash
 sdk install java 21.0.3-tem
 sdk use java 21.0.3-tem
 java -version
 ```
 
-### 4. Настрой Telegram Webhook
+### 4. Set up Telegram Webhook
 
-Используй `ngrok` для локального теста:
+Use `ngrok` for local testing:
 
 ```bash
 ngrok http 8080
 ```
 
-Установи Webhook:
+Set the Webhook:
 
 ```bash
 curl -X POST \
@@ -73,7 +73,7 @@ curl -X POST \
 
 ---
 
-## 🔧 Структура проекта
+## 🔧 Project Structure
 
 ```
 src/main/java/org/example/telegrambot/
@@ -91,10 +91,10 @@ src/main/java/org/example/telegrambot/
 
 ---
 
-## ✉️ Команды, которые понимает бот
+## ✉️ Supported Commands
 
-* `/start` — Приветствие и инструкция
-* `/calc` — Простое вычисление. Пример:
+* `/start` — Greeting and instructions
+* `/calc` — Simple calculations. Examples:
 
 ```
 /calc 10 / 2
@@ -103,28 +103,28 @@ src/main/java/org/example/telegrambot/
 
 ---
 
-## 🎖️ Идеи для доработки
+## 🎖️ Possible Improvements
 
-* Поддержка кнопок и inline-режима
-* Сохранение истории сообщений
-* Docker-образ для деплоя
-* Обработка других типов обновлений (фото, голос и т.д.)
-
----
-
-## 🎁 Лицензия
-
-MIT — свободно использовать, дорабатывать и продавать как часть своих продуктов.
+* Add buttons and inline mode support
+* Save message history
+* Build a Docker image for deployment
+* Support more update types (photo, voice, etc.)
 
 ---
 
-## ☕ Автор
+## 🎁 License
 
-Создан с любовью и сжатием времени — специально для тех, кто хочет:
+MIT — free to use, modify, and sell as part of your own products.
 
-* понять Telegram API с нуля
-* зарабатывать на разработке
-* запускать продукты быстро
+---
+
+## ☕ Author
+
+Crafted with love and time efficiency — for those who want to:
+
+* understand Telegram API from scratch
+* earn money with development
+* launch products quickly
 
 Telegram: [@garanin\_soft](https://t.me/garanin_soft)
 
