@@ -1,6 +1,6 @@
 # Telegram Bot on Spring Boot — Evening-Ready Starter Template
 
-This project is a minimal yet professionally structured Spring Boot template for Telegram bots. Perfect for:
+This project is a **minimal yet professionally structured Spring Boot template** for Telegram bots.
 
 * Quickly starting with the **Telegram API**
 * Beginners learning **Spring Boot** and **REST API**
@@ -8,12 +8,36 @@ This project is a minimal yet professionally structured Spring Boot template for
 
 ---
 
-## ✨ Features
+## ✨ Features (Free Version)
 
-* ✉️  Handles Telegram Webhook requests
-* ⚙️ Built-in support for `/start` and `/calc` commands
-* ⌛ Simple calculator for inputs like `/calc 2 * 3`
-* 🌐 REST API with logging and clear separation of concerns (Controller / Service / Client)
+- ✉️  Handles Telegram Webhook requests
+- ⚙️  Supports `/start` and `/calc` commands
+- ⌛  Simple calculator: `/calc 2 * 3`
+- 🌐  REST API with clean architecture (Controller / Service / Client)
+- 🧪  Ready to run locally in minutes
+
+---
+
+## 🚀 Full Version on Gumroad
+
+The [Gumroad edition](https://garaninsoft.gumroad.com/l/telegram-bot-quickstart) includes **additional tools and upgrades**:
+
+### 🔹 Basic (€5)
+- Full source code
+- Setup documentation
+
+### 🔥 Pro (€15)
+- Everything from Basic, plus:
+    - 🐳 Dockerfile and `docker-compose.yml`
+    - ✅ GitHub Actions (CI)
+
+### 🎓 Support (€49)
+- Everything from Pro, plus:
+    - 🛠️ Personal help with deployment (Docker, VPS, etc.)
+    - 🔧 Project extension advice
+    - 💬 Telegram/Web support (1–2 day response)
+
+➡️ [Get it now on Gumroad →](https://garaninsoft.gumroad.com/l/telegram-bot-quickstart)
 
 ---
 
@@ -42,7 +66,7 @@ telegram:
 ./gradlew bootRun
 ```
 
-⚠️  If you see a build error, you may be using ~~JDK 21+~~.
+⚠️ If you see a build error, you may be using ~~JDK 21+~~.
 We recommend switching to**java 21**.
 Check your version: 
 ```bash
@@ -103,12 +127,12 @@ src/main/java/org/example/telegrambot/
 
 ---
 
-## 🎖️ Possible Improvements
+## 🎖️ Ideas for Extension
 
-* Add buttons and inline mode support
-* Save message history
-* Build a Docker image for deployment
-* Support more update types (photo, voice, etc.)
+* ✅ Add buttons and inline support
+* 🧾 Save message history
+* 🐳 Build and deploy Docker image
+* 🎧 Handle voice, photo, other updates
 
 ---
 
@@ -129,4 +153,11 @@ Crafted with love and time efficiency — for those who want to:
 Telegram: [@garanin\_soft](https://t.me/garanin_soft)
 
 ---
+📦 Need a ready-to-use Telegram Bot on Spring Boot?
+📦 Ready-to-use Telegram Bot template for Java devs — Get it on Gumroad:
+
+👉 https://garaninsoft.gumroad.com/l/telegram-bot-quickstart
+
+---
+
 
