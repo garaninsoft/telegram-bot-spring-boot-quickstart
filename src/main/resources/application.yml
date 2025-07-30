@@ -3,4 +3,4 @@ server:
 
 telegram:
   bot:
-    token: ""
+    token: "OUR_BOT_TOKEN"
