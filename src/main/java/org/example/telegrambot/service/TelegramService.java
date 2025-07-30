@@ -32,30 +32,30 @@ public class TelegramService {
     private void handleTextMessage(String text, Long chatId) {
         if (text.startsWith("/start")) {
             telegramClient.sendMessage(chatId, """
-                    👋 Привет! Я бот-калькулятор.
-                    Используй команду:
+                    👋 Hi! I'm a calculator bot. 
+                    Use the command: 
                     /calc 2 + 2
                     """);
         } else if (text.startsWith("/calc")) {
             String expression = text.replace("/calc", "").trim();
             try {
                 double result = evaluate(expression);
-                telegramClient.sendMessage(chatId, "Результат: " + result);
+                telegramClient.sendMessage(chatId, "Result: " + result);
             } catch (Exception e) {
                 telegramClient.sendMessage(chatId, """
-                        ❌ Ошибка вычисления. Убедись, что формат правильный:
-                        Пример: /calc 2 * 3
-                        (пробелы обязательно)
+                        ❌ Calculation error. Make sure the format is correct:
+                        Example: /calc 2 * 3
+                        (spaces are required)
                         """);
             }
         } else {
-            telegramClient.sendMessage(chatId, "🤖 Неизвестная команда. Попробуй /calc 2 + 2");
+            telegramClient.sendMessage(chatId, "🤖 Unknown command. Try /calc 2 + 2");
         }
     }
 
     private double evaluate(String expr) {
         String[] parts = expr.split(" ");
-        if (parts.length != 3) throw new IllegalArgumentException("Неверный формат");
+        if (parts.length != 3) throw new IllegalArgumentException("Invalid format");
 
         double a = Double.parseDouble(parts[0]);
         String op = parts[1];
@@ -66,10 +66,10 @@ public class TelegramService {
             case "-" -> a - b;
             case "*" -> a * b;
             case "/" -> {
-                if (b == 0) throw new ArithmeticException("Деление на ноль");
+                if (b == 0) throw new ArithmeticException("Division by zero");
                 yield a / b;
             }
-            default -> throw new IllegalArgumentException("Неизвестный оператор: " + op);
+            default -> throw new IllegalArgumentException("Unknown operator: " + op);
         };
     }
 }
