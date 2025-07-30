@@ -41,7 +41,42 @@ The [Gumroad edition](https://garaninsoft.gumroad.com/l/telegram-bot-quickstart)
 
 ---
 
-## 🌐 Quick Start
+## 🐳 Why Docker-based setup (Pro) is better than `./gradlew bootRun`
+
+If you're using the **Pro version**, you can launch your bot via Docker. But why bother with Docker if `./gradlew bootRun` works?
+
+### 🔁 1. Consistent Environment
+Docker guarantees that your bot will run **exactly the same** on any computer, regardless of your Java version, OS, or installed tools.  
+No more "works on my machine" bugs.
+
+> `./gradlew bootRun` depends on your local environment and can fail due to JDK or Gradle issues.
+
+### ⚙️ 2. Ready for Deployment
+With Docker, your project is already prepared for **production deployment**.  
+You can host the bot on a cloud server (VPS, Railway, Fly.io, etc.) without touching the code.
+
+### ✅ 3. All Dependencies Included
+Java, Gradle, ngrok and other tools are **preconfigured** inside Docker.  
+You don’t need to install anything manually — it's all in the container.
+
+### 🔐 4. Isolated & Safe
+Your app runs in a sandboxed environment, with **no conflicts** between projects or local installations.
+
+### 🚀 5. CI/CD Integration (Pro Only)
+With the included GitHub Actions configuration, the bot can be **automatically built and tested** on every push.
+
+---
+
+> 🔥 The **Pro version** includes:
+> - Dockerfile & docker-compose
+> - GitHub Actions setup
+> - Vue frontend for sending commands
+
+All together — this gives you a professional-grade development and deployment experience.
+
+---
+
+## 🟢 Quick Start (Basic & Pro)
 
 ### 1. Clone the repository
 
@@ -61,6 +96,7 @@ telegram:
 ```
 
 ### 3. Run the app
+### Option 1: Run via Gradle (Basic & Pro)
 
 ```bash
 ./gradlew bootRun
@@ -77,6 +113,12 @@ f it's ~~JDK 21+~~, switch with:
 sdk install java 21.0.3-tem
 sdk use java 21.0.3-tem
 java -version
+```
+
+### Option 2: Run via Docker 🐳 (Pro only)
+```bash
+docker compose build
+docker compose up
 ```
 
 ### 4. Set up Telegram Webhook
